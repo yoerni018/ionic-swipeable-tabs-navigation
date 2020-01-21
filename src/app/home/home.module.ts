@@ -6,6 +6,11 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { SuperTabsModule } from "@ionic-super-tabs/angular";
+import { NewsPageModule } from '../pages/news/news.module';
+import { AboutPageModule } from '../pages/about/about.module';
+import { AccountPageModule } from '../pages/account/account.module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +21,11 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    SuperTabsModule,
+    NewsPageModule,
+    AboutPageModule,
+    AccountPageModule
   ],
   declarations: [HomePage]
 })
